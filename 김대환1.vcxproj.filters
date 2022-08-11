@@ -20,7 +20,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="2022.8.9.h">
+    <ClInclude Include="변수설명2022.8.9.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="상수설명2022.8.10.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
