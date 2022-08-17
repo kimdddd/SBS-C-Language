@@ -20,16 +20,19 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="변수설명2022.8.9.h">
+    <ClInclude Include="2022.8.9%28변수설명%29.h">
       <Filter>수업자료</Filter>
     </ClInclude>
-    <ClInclude Include="상수설명2022.8.10.h">
+    <ClInclude Include="2022.8.10%28상수설명%29.h">
       <Filter>수업자료</Filter>
     </ClInclude>
-    <ClInclude Include="비트설명2022.8.11.h">
+    <ClInclude Include="2022.8.11%28비트설명%29.h">
       <Filter>수업자료</Filter>
     </ClInclude>
-    <ClInclude Include="조건문2022.8.12.h">
+    <ClInclude Include="2022.8.12%28조건문%29.h">
+      <Filter>수업자료</Filter>
+    </ClInclude>
+    <ClInclude Include="2022.8.16%28스위치%29.h">
       <Filter>수업자료</Filter>
     </ClInclude>
   </ItemGroup>
