@@ -35,5 +35,8 @@
     <ClInclude Include="2022.8.16%28스위치%29.h">
       <Filter>수업자료</Filter>
     </ClInclude>
+    <ClInclude Include="2022.8.17(반복문).h">
+      <Filter>수업자료</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
