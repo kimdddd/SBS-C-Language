@@ -72,11 +72,5 @@ void main()
     char variable = -129;
     printf("variableÀÇ °ª : %d\n", variable);
 
-
-
-
-
-
-
 }
 */

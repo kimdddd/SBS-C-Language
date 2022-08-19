@@ -1,6 +1,6 @@
 #pragma once
 #include <stdio.h>
-
+/*
 void main()
 {
 	// 논리 연산자
@@ -16,7 +16,7 @@ void main()
 	// Y 절편 : (x[0], y)
 	// X 절편 : (x, y[0])
 	// 원점 : (x[0],yp[0)
-/*
+
 	int x = 0;
 	int y = 0;
 

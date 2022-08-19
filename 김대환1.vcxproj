@@ -148,6 +148,7 @@
     <ClInclude Include="2022.8.17(반복문).h" />
     <ClInclude Include="2022.8.9%28변수설명%29.h" />
     <ClInclude Include="2022.8.10%28상수설명%29.h" />
+    <ClInclude Include="202208.18형 변환.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
