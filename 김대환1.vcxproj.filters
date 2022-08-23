@@ -38,10 +38,13 @@
     <ClInclude Include="2022.8.17(반복문).h">
       <Filter>수업자료</Filter>
     </ClInclude>
-    <ClInclude Include="202208.18%28형변환%29.h">
+    <ClInclude Include="2022.08.18%28형변환%29.h">
       <Filter>수업자료</Filter>
     </ClInclude>
     <ClInclude Include="2022.08.19%28입력함수%29.h">
+      <Filter>수업자료</Filter>
+    </ClInclude>
+    <ClInclude Include="2022.08.22(배열).h">
       <Filter>수업자료</Filter>
     </ClInclude>
   </ItemGroup>
