@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="2022.08.19%28입력함수%29.h" />
     <ClInclude Include="2022.08.22(배열).h" />
+    <ClInclude Include="2022.08.23(2차원배열).h" />
     <ClInclude Include="2022.8.16%28스위치%29.h" />
     <ClInclude Include="2022.8.12%28조건문%29.h" />
     <ClInclude Include="2022.8.11%28비트설명%29.h" />
