@@ -56,5 +56,8 @@
     <ClInclude Include="2022.08.25(함수).h">
       <Filter>수업자료</Filter>
     </ClInclude>
+    <ClInclude Include="2022.08.26%28함수의호출%29.h">
+      <Filter>수업자료</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
