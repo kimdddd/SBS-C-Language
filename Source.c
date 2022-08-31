@@ -1,137 +1,75 @@
 #include <stdio.h>
-#include <time.h>
+#include <stdlib.h>
 
-
-//                 3
-int Function(int count)
+void Function()
 {
-	// 매개변수의 값이 1이 되면 함수를 반환합니다.
-	if (count == 1)
-	{
-		return;
-	}
-	
-	Function(count -1);
-
-	printf("count 변수의 값: %d\n", count);
+	printf("Hello");
 }
 
-int Factorial(int number)
-{
-	if (number == 1)
-	{
-		return 1;
-	}
-	else
-	{
-		
-	}
-}
 
 void main()
 {
-	// UP - DOWN 게임 
-	/* 
-	// 1.컴퓨터가 랜덤한 숫자를 뽑습니다. 변수 (a) <- 1 ~ 50 랜덤한 값을넣어줍니다.
-	// 2.우리가 scanf-s() 함수를 사용해서 값을 입력합니다. 변수 (b) <- 입력한 값을 넣어줍니다.
-	// 3.그다음 컴픁가 뽑은 랜덤한 숫자와 우리가 입력한 숫자가 맞는지 확인하는 게임입니다.
-	// if(a와 b가 맞는지 확인합니다.)
-	// 맞으면 "컴퓨터에게 승리하였습니다."
-	// 틀리면 "HP가 1씩 감소합니다."()
+	// 이중 포인터 응용
+	/*
+	int a = 10;
+	int b = 20;
 
-	// 컴퓨터가 뽑은 랜덤한 값 :(33)
-	// 20값을 입력(컴퓨터가 뽑은 숫자 보다 작습니다.) HP -1;
-	// 34값을 입력(컴퓨터가 뽑은 숫자 보다 큽니다.) HP -1;
-
-	// rand() : 0 ~ 32767 사이의 난수 값을 반환합니다.
-	// 컴퓨터는 완벽한 랜덤을 만들 수 없습니다.
-	// 1970년 1월 1일 기준으로 시간을 가져와서 랜덤을 생성합니다.
-	// 1~ 10 사이의 난수값만 나올 수 있도록 설정해주세요. rand()%연산자 사용
-
-	int answer = 0;
-
-	int life = 5;
-
-	srand(time(NULL));
-
-	int computer = rand() % 50 + 1;
+	int * ptr1 = &a;
+	int * ptr2 = &b;
 	
-	// 게임 업데이트
-	// life 함수가 0이 아니라면 계속 실행됩니다.
-	while (life != 0)
-	{
-		printf("컴퓨터가 가지고 있는 숫자를 입력해주세요.\n");
-		// scanf_s () 는 버퍼를 사용합니다.
-		// 버퍼란
-		// 데이터가 이동시 임시로 저장되는 공간이며, 서식 지정자에 따라 입력할 수 있는 데이터의 범위도 결정됩니다.
-
-		scanf_s("%d", &answer);		                                             			
-
-		if (answer == computer)
-		{
-			printf("게임에서 승리하였습니다.");
-			break; // while문에서 탈출합니다.
-		}
-		else if(answer > computer)
-		{
-			life--;
-			printf("컴퓨터가 뽑은 숫자보다 큽니다.\n");
-
-		}
-		else if (answer < computer)
-		{
-			life--;
-			printf("컴퓨터가 뽑은 숫자보다 작습니다.\n");
-		}
+	int** pptr1 = &ptr1;
+	int** pptr2 = &ptr2;
 	
-		printf("현재 life : %d\n", life);
+	int * temp = *pptr1;
+	*pptr1 = *pptr2;
+	*pptr2 = temp;
+	//                                  10,20
 	
-	}
+	printf("a의 값 : %d, b의 값 : %d\n", a, b);
 
-	if (life == 0)
-	{
-		printf("당신은 게임에서 패배하였습니다.");
-	}
-*/
-
-	// 상한 연산자
-	/* 
-	// 3개의 피연산자를 가지는 조건 연산자입니다.
-
-	int x = 10;
-	int y = 20;
-
-	//         (조건) ? (100):(200)
- 	//                   참   거짓
-	int temp = x == y ? 100 : 55;
-
-	printf("temp 변수의 값은: %d", temp);
+	printf("ptr1이 가리키는 값: %d, ptr2가 가리키는 값 : %d\n", *ptr1, *ptr2);
 	*/
 
-	// 재귀 함수?
+	// 댕글링 포인터
 	/* 
-	// 어떤 함수에서 자신을 다시 호출하여 작업을 수행하는 함수입니다.
+	// 이미 해제된 메모리를 가리키고 있는 포인터입니다.
 
-	Function(3);
+	int * ptr = (int*)malloc(4);
 
-	// 재귀 함수는 함수를 계속 호출하기 때문에 스택 영역에 메모리가 계속 쌓이게 되므로 스택 오버플로우가 일어난다.
+	*ptr = 10;
 
-	// 재귀 함수를 사용하려면 특정한 시점에서 함수를 반환해주어야 합니다.
+	printf("ptr이 가리키는 주소는: %p\n", ptr);
+	printf("ptr이 가리키는 값: %d\n", *ptr);
+
+	free(ptr);
+	// 동적 할당한 메모리를 해제할 때 포인터 변수를 NULL로 초기화합니다.
+	ptr = NULL;
+	
+	// 해제한 메모리를 다시 할당하면 처음 생성한 위치에서 메모리가 생성됩니다.
+	ptr = (int*)malloc(4);
+
+	*ptr = 20;
+	printf("ptr이 가리키는 주소는: %p\n", ptr);
+	printf("ptr이 가리키는 값: %d\n", *ptr);
 	*/
 
-	// 팩토리얼
-	// 함수를 생성해서 매개 변수에 n값을 넣어줍니다.
-	// n값에 대한 팩토리얼을 구해주세요
+	// 함수 포인터
+	// 함수의 주소값을 저장하고 가리킬 수 있는 변수입니다.
+	
+	//printf("Function함수의 주소: %p\n", Function);
+	//printf("Function함수의 주소: %p\n", &Function);
+	
+	void(*fp)();
 
-	int select = 0;
+	// 함수 포인터는 함수의 반환형과 매개변수의 타입이 일치해야 하며, 
+	// 함수 포인터를 사용하여 동적으로 메모리를 할당할 수 없습니다.
+	fp = Function;
 
-	scanf_s("%d", select);
-
-	int result = Factorial(select);
-
-	printf("result 변수의 값 : %d", result);
-
+	fp();
 
 
 
 }
+
+
+
